@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import Hero from '../components/Header';
+import Hero from '../components/Hero';
 import About from '../components/About';
 import SwiperSection from '../components/SwiperSection';
 import CharacterGrid from '../components/CharacterGrid';

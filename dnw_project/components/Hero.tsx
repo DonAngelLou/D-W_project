@@ -13,25 +13,46 @@ const Hero = () => {
   };
 
   return (
-    <section className="h-screen">
+    <section className="
+            bg-[url('/bg.png')]
+            bg-cover
+            bg-no-repeat
+            bg-center
+
+            before:absolute
+            before:inset-x-0
+            before:bg-gradient-to-r
+            before:from-[#CF1E11]
+            before:to-[#CF1E11]
+            before:opacity-50
+            before:h-screen
+            ">            
+           
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
-        className="flex flex-col items-center lg:flex-row justify-center gap-10"
+        className="flex flex-col items-center lg:flex-row justify-center gap-10 lg:basis-1/2 w-full h-screen
+
+            bg-[url('/bg1.png')]
+            bg-cover
+            bg-no-repeat
+            bg-center
+                     
+            "
       >
-        <div className='mt-9 text-center px-8 flex flex-col max-w-lg'>
-          <img src="/d&w-logo.png" alt="hero" className='h-36'/>
+        <div className='mt-9 text-center px-8 flex flex-col max-w-lg lg:max-w-[700px] z-40'>
+          <img src="/d&w-logo.png" alt="hero" className='h-36 lg:h-[250px] lg:[700px] '/>
           <p className='mt-8'>Marvel Studios’ “Deadpool & Wolverine” delivers the ultimate, iconic, cinematic team-up throwdown. Come together in cinemas on July 24.</p>
           <div>
-            <div className='mt-10 flex gap-10 justify-center'>
+            <div className='mt-10 flex gap-10 justify-center z-40'>
               <button className='text-[#E81127] bg-[#FBDC0D] py-2 px-4 hover:bg-gradient-to-r hover:from-[#FFFFFF] hover:to-[#FBDC0D] font-semibold'>Get Tickets Now</button>
               <button className='flex items-center gap-2 font-semibold'><FaPlayCircle /><span>Watch Trailer</span></button>  
             </div>
           </div>
         </div>
-        <div>
-          <img src="/hero.png" alt="hero" className='h-96'/>
+        <div className='z-40'>
+          <img src="/hero.png" alt="hero" className='h-96 lg:max-h-[900px] lg:h-auto'/>
         </div>
         <div className='left-0 bg-white absolute top-3/4 rounded-r-full flex flex-row'>
           <p className='py-3 px-4 text-black flex items-center font-semibold' onClick={handleShareClick}>SHARE ON<span><MdOutlineKeyboardArrowRight size={25}/></span></p> 
@@ -42,8 +63,9 @@ const Hero = () => {
             <IoLogoWhatsapp size={20}/>
             <FaThreads size={20}/>
           </div>
-        </div>  
+        </div>         
       </motion.div>
+      
     </section>
   );
 };

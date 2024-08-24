@@ -40,10 +40,8 @@ const Hero = () => {
             bg-no-repeat
             bg-center
             
-           
-            
-            before:absolute
-            
+                      
+            before:absolute            
             before:inset-x-0           
             before:bg-gradient-to-t from-black to-transparent
             before:opacity-50            
@@ -53,8 +51,8 @@ const Hero = () => {
             
             "
       >
-        <div className='mt-9 text-center px-8 flex flex-col max-w-lg lg:max-w-[700px] z-30'>
-          <img src="/d&w-logo.png" alt="hero" className='h-36 lg:h-[250px] lg:[700px] '/>
+        <div className='mt-9 text-center px-8 flex flex-col lg:max-w-[700px] z-30'>
+          <img src="/d&w-logo.png" alt="hero" className='lg:h-[250px] lg:[700px]'/>
           <p className='mt-8'>Marvel Studios’ “Deadpool & Wolverine” delivers the ultimate, iconic, cinematic team-up throwdown. Come together in cinemas on July 24.</p>
           <div>
             <div className='mt-10 flex gap-10 justify-center'>
@@ -66,8 +64,8 @@ const Hero = () => {
         <div className='z-30'>
           <img src="/hero.png" alt="hero" className='h-96 lg:max-h-[900px] lg:h-auto'/>
         </div>
-        <div className='left-0 bg-white absolute top-3/4 rounded-r-full flex flex-row'>
-          <p className='py-3 px-4 text-black flex items-center font-semibold' onClick={handleShareClick}>SHARE ON<span><MdOutlineKeyboardArrowRight size={25}/></span></p> 
+        <div className='left-0 bg-white absolute top-3/4 rounded-r-full flex flex-row z-40'>
+          <p className='py-3 px-4 text-black flex items-center font-semibold ' onClick={handleShareClick}>SHARE ON<span><MdOutlineKeyboardArrowRight size={25}/></span></p> 
           <div className={`bg-red-500 py-3 px-4 rounded-r-full text-white bg-gradient-to-r from-[#E81127] to-[#820A16] gap-3 z-40 ${sharebutton}`}>
             <IoLogoFacebook size={20}/>
             <FaInstagram size={20}/>

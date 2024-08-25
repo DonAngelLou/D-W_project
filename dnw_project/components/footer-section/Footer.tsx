@@ -1,7 +1,22 @@
+import Image from "next/image";
+import Link from "next/link";
+
 const Footer = () => (
-  <footer className="px-4 py-6 bg-black text-center">
-    <h2 className="text-4xl font-semibold">FOOTER</h2>
-    <p>&copy; 2024 Deadpool & Wolverine Fan Project. All rights reserved.</p>
+  <footer className="h-max p-12 bg-white text-black flex flex-col gap-6 justify-center items-center tracking-tighter">
+    <div className="relative w-[188px] h-[48px]">
+      <Image
+        src='/image.png'
+        fill
+        alt="Marvel Studios Logo"
+      />
+    </div>
+    <div className="font-bold text-xs">
+      <Link href='/' className="hover:bg-[#E81127] hover:text-white px-4 py-2 transition duration-200">ABOUT</Link>
+      <Link href='/' className="hover:bg-[#E81127] hover:text-white px-4 py-2 transition duration-200">SPOTLIGHTS</Link>
+      <Link href='/' className="hover:bg-[#E81127] hover:text-white px-4 py-2 transition duration-200">FAN ZONE</Link>
+    </div>
+    <hr className="border border-black w-full" />
+    <p className="text-xs text-center font-bold">&copy; 2024 DEADPOLL & WOLVERINE FAN PROJECT. ALL RIGHTS RESERVED.</p>
   </footer>
 );
 

@@ -23,7 +23,7 @@ const FooterHero = () => {
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.8 }}
                 className="relative flex flex-col gap-10 justify-center items-center h-1/2">
-                <div className="relative h-[113px] w-[325px]">
+                <div className="relative h-[113px] md:h-[214px] w-[325px] md:w-[616px]">
                     <Image
                         src={dNwLogo}
                         fill
@@ -31,7 +31,7 @@ const FooterHero = () => {
                     />
                 </div>
                 <div className='flex justify-center gap-11 w-full tracking-tighter font-bold text-lg'>
-                    <button className='bg-[#FBDC0D] text-[#E81127] text-sm px-4 py-3 hover:bg-[#FBDC0D]/80'>Get Tickets Now</button>
+                    <button className='bg-[#FBDC0D] text-[#E81127] text-sm px-4 md:px-6 py-3 hover:bg-[#FBDC0D]/80'>Get Tickets Now</button>
                     <button className='flex items-center gap-3 group'>
                         <IoPlay className='rounded-full bg-white text-slate-900 size-9 p-1 group-hover:bg-white/80' />
                         <span className='group-hover:text-white/80'>Watch Trailer</span>

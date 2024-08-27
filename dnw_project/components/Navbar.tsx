@@ -19,13 +19,13 @@ const Navbar = () => {
                  <div className='text-black cursor-pointer p-1 hover:text-[#E81127]'>About</div>
                  <div className='text-black cursor-pointer p-1 hover:text-[#E81127]'>Spotlight</div>
                  <div className='text-black cursor-pointer p-1 hover:text-[#E81127]'>Fan Zone</div>
-                 <div className='text-[#E81127] cursor-pointer border-2 border-[#E81127] px-2 py-1 hover:text-white hover:bg-gradient-to-r hover:from-[#E81127] hover:via-[#F27481] hover:to-[#FFFFFF] active:bg-[#E81127] active:text-white'>Watch Trailer</div>
+                 <button className='text-[#E81127] cursor-pointer border-2 border-[#E81127] px-2 py-1 hover:text-white hover:bg-gradient-to-r hover:from-[#E81127] hover:via-[#F27481] hover:to-[#FFFFFF] active:bg-[#E81127] active:text-white'>Watch Trailer</button>
                 
   
             </div>
             {/* Small Screen */}
             <div onClick={toggleMenu}className='md:hidden flex flex-row items-center gap-2 cursor-pointer relative'>
-                <GiHamburgerMenu className='text-[#E81127]'/>
+                <GiHamburgerMenu className='text-[#E81127]' size={20}/>
                 <Mobilemenu visible={showMobileMenu}/>
             </div>
        

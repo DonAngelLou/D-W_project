@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 const Footer = () => (
-  <footer className="h-max p-12 bg-white text-black flex flex-col gap-6 justify-center items-center tracking-tighter">
+  <footer className="h-max p-12 md:py-24 md:px-32 bg-white text-black flex flex-col gap-6 md:gap-10 justify-center items-center tracking-tighter">
     <div className="relative w-[188px] h-[48px]">
       <Image
         src='/image.png'

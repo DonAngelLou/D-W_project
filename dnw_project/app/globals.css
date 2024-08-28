@@ -18,16 +18,52 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
+  background: linear-gradient(to bottom,
       transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+.social-bg-container {
+  background-image:
+    url('/social-fanzone-deadpool.png'),
+    url('/social-fanzone-wolverine.png'),
+    linear-gradient(to right, #A907181A, #BAA2021A),
+    linear-gradient(#000000BF, #000000BF),
+    url('/social-fanzone-bg-1.png');
+  background-position:
+    -38px 213px,
+    -70px 760px,
+    center,
+    center,
+    center;
+  background-size:
+    430px,
+    850px 770px,
+    cover,
+    cover,
+    cover;
+  background-repeat: no-repeat;
+}
+
+@media (min-width: 768px) {
+  .social-bg-container {
+    background-position:
+      -18px 380px,
+      355px 700px,
+      center,
+      center,
+      center;
+    background-size:
+      380px 550px,
+      680px 630px,
+      cover,
+      cover,
+      cover;
   }
 }

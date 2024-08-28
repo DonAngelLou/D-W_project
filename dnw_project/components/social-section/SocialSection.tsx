@@ -53,71 +53,52 @@ const testimonialsData: CardProps[] = [
 
 const SocialSection = () => (
   <>
-    <section
-      className='h-max bg-cover bg-center bg-no-repeat'
-      style={{
-        backgroundImage:
-          `url('/social-fanzone-deadpool.png'),
-          url('/social-fanzone-wolverine.png'),
-          linear-gradient(to right, #A907181A, #BAA2021A),
-          linear-gradient(#000000BF, #000000BF),
-          url('/social-fanzone-bg-1.png')`,
-        backgroundPosition:
-          `-38px 213px,
-          -70px 760px,
-          center,
-          center,
-          center`,
-        backgroundSize:
-          `430px,
-          850px 770px,
-          cover,
-          cover,
-          cover`,
-      }}>
-
+    <section className='h-max social-bg-container'>
       <motion.div
         initial={{ y: 100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.8 }}
         className='grid grid-cols-1 relative place-items-center py-12'
       >
-        <div className='col-span-1 flex justify-center my-10 w-full'>
-          <div className="relative h-[100px] w-[260px]">
-            <Image
-              src={dNwLogo}
-              fill
-              alt='Deadpool & Wolverine Logo'
-            />
-          </div>
-          <div
-            className='flex items-center absolute w-max px-4 top-[180px] left-[230px] -rotate-6'
-            style={{
-              backgroundImage: "url('/social-fanzone-bg-2.png'), linear-gradient(#BD0D38, #BD0D38)",
-            }}
-          >
-            <span className='tracking-tighter text-lg font-medium'>FAN ZONE</span>
-          </div>
-        </div>
-
-        {
-          testimonialsData.map((data, index) => (
-            <div key={index} className='py-3'>
-              <Card
-                avatarSrc={data.avatarSrc}
-                name={data.name}
-                username={data.username}
-                commentParagraph1={data.commentParagraph1}
-                commentParagraph2={data.commentParagraph2}
-                time={data.time}
-                date={data.date}
-                likesCount={data.likesCount}
-                repliesCount={data.repliesCount}
+        <div className='w-[335px] md:w-[410px]'>
+          <div className='col-span-1 flex justify-center my-10 w-full'>
+            <div className="relative h-[100px] md:h-[150px] w-full">
+              <Image
+                src={dNwLogo}
+                fill
+                alt='Deadpool & Wolverine Logo'
+                className='px-10'
               />
+              <div className='absolute -inset-y-3 inset-x-4 flex justify-end items-end'>
+                <div
+                  className='flex items-center w-max px-4 -rotate-6'
+                  style={{
+                    backgroundImage: "url('/social-fanzone-bg-2.png'), linear-gradient(#BD0D38, #BD0D38)",
+                  }}
+                >
+                  <span className='tracking-tighter text-lg md:text-2xl font-medium'>FAN ZONE</span>
+                </div>
+              </div>
             </div>
-          ))
-        }
-
+          </div>
+          {
+            testimonialsData.map((data, index) => (
+              <div key={index} className='py-3'>
+                <Card
+                  avatarSrc={data.avatarSrc}
+                  name={data.name}
+                  username={data.username}
+                  commentParagraph1={data.commentParagraph1}
+                  commentParagraph2={data.commentParagraph2}
+                  time={data.time}
+                  date={data.date}
+                  likesCount={data.likesCount}
+                  repliesCount={data.repliesCount}
+                />
+              </div>
+            ))
+          }
+        </div>
       </motion.div>
 
       <div className='relative z-20'>

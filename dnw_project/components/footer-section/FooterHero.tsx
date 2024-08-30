@@ -6,7 +6,7 @@ import { IoPlay } from 'react-icons/io5';
 const FooterHero = () => {
     return (
         <section
-            className='h-[824px] bg-no-repeat'
+            className='h-[824px] lg:h-[1200px] bg-no-repeat'
             style={{
                 backgroundImage:
                     `linear-gradient(#00000066, #00000066), url('/footer-hero-bg.png')`,
@@ -22,8 +22,8 @@ const FooterHero = () => {
                 initial={{ y: 100, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.8 }}
-                className="relative flex flex-col gap-10 justify-center items-center h-1/2">
-                <div className="relative h-[113px] md:h-[214px] w-[325px] md:w-[616px]">
+                className="relative flex flex-col gap-10 justify-center items-center h-1/2 lg:h-[776px]">
+                <div className="relative h-[113px] md:h-[214px] lg:h-[281px] w-[325px] md:w-[616px] lg:w-[807px]">
                     <Image
                         src={dNwLogo}
                         fill

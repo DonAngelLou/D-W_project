@@ -58,29 +58,29 @@ const SocialSection = () => (
         initial={{ y: 100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.8 }}
-        className='grid grid-cols-1 relative place-items-center py-12'
+        className='grid relative place-items-center py-12'
       >
-        <div className='w-[335px] md:w-[410px]'>
-          <div className='col-span-1 flex justify-center my-10 w-full'>
-            <div className="relative h-[100px] md:h-[150px] w-full">
-              <Image
-                src={dNwLogo}
-                fill
-                alt='Deadpool & Wolverine Logo'
-                className='px-10'
-              />
-              <div className='absolute -inset-y-3 inset-x-4 flex justify-end items-end'>
-                <div
-                  className='flex items-center w-max px-4 -rotate-6'
-                  style={{
-                    backgroundImage: "url('/social-fanzone-bg-2.png'), linear-gradient(#BD0D38, #BD0D38)",
-                  }}
-                >
-                  <span className='tracking-tighter text-lg md:text-2xl font-medium'>FAN ZONE</span>
-                </div>
+        <div className='flex justify-center my-10 w-full'>
+          <div className="relative h-[96px] md:h-[152px] lg:h-[176px] w-[328px] md:w-[408px] lg:w-[464px]">
+            <Image
+              src={dNwLogo}
+              fill
+              alt='Deadpool & Wolverine Logo'
+              className='px-10'
+            />
+            <div className='absolute -inset-y-3 inset-x-4 flex justify-end items-end'>
+              <div
+                className='flex items-center w-max px-4 -rotate-6'
+                style={{
+                  backgroundImage: "url('/social-fanzone-bg-2.png'), linear-gradient(#BD0D38, #BD0D38)",
+                }}
+              >
+                <span className='tracking-tighter text-lg md:text-2xl font-medium'>FAN ZONE</span>
               </div>
             </div>
           </div>
+        </div>
+        <div className='grid grid-cols-1 lg:grid-cols-2 gap-x-8 w-[335px] md:w-[410px] lg:w-[800px] lg:mt-6'>
           {
             testimonialsData.map((data, index) => (
               <div key={index} className='py-3'>

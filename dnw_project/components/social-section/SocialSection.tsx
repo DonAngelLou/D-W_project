@@ -80,7 +80,7 @@ const SocialSection = () => (
             </div>
           </div>
         </div>
-        <div className='grid grid-cols-1 lg:grid-cols-2 gap-x-8 w-[335px] md:w-[410px] lg:w-[800px] lg:mt-6'>
+        <div className='grid grid-cols-1 lg:grid-cols-2 gap-x-8 w-[332px] md:w-[404px] lg:w-[840px] lg:mt-6'>
           {
             testimonialsData.map((data, index) => (
               <div key={index} className='py-3'>

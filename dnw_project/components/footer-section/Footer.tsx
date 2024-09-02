@@ -15,7 +15,7 @@ const Footer = () => (
       <Link href='/' className="hover:bg-[#E81127] hover:text-white px-4 py-2 transition duration-200">SPOTLIGHTS</Link>
       <Link href='/' className="hover:bg-[#E81127] hover:text-white px-4 py-2 transition duration-200">FAN ZONE</Link>
     </div>
-    <hr className="border border-black w-full" />
+    <hr className="border border-black/50 w-full" />
     <p className="text-xs text-center font-bold">&copy; 2024 DEADPOLL & WOLVERINE FAN PROJECT. ALL RIGHTS RESERVED.</p>
   </footer>
 );

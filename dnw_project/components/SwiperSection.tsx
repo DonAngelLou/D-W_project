@@ -19,7 +19,7 @@ import red2 from '../public/red2.png';
 
 const SpotlightSection: FC = () => {
   return (
-    <section className="relative w-full h-full bg-black py-16 lg:py-24">
+    <section className="relative w-full h-full bg-black py-16 lg:py-24 overflow-hidden">
       {/* Background Image with Dark Overlay */}
       <div
         className="absolute inset-0 bg-cover bg-left-top"
@@ -36,6 +36,7 @@ const SpotlightSection: FC = () => {
         className="absolute bottom-[-200px] left-0 w-[400px] h-[400px] lg:w-[649px] lg:h-[660px] opacity-80 hidden lg:block"
         alt="Red Vector"
       />
+      
       <img
         src={red2.src}
         className="absolute top-0 right-[-100px] w-[300px] h-[300px] lg:w-auto lg:h-[1200px] opacity-80 object-cover overflow-hidden hidden lg:block"
@@ -121,7 +122,6 @@ const SpotlightSection: FC = () => {
           </motion.div>
         </div>
 
-        {/* Swiper for Mobile View */}
         {/* Swiper for Mobile View */}
         <div className="lg:hidden">
           <Swiper

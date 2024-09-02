@@ -18,20 +18,20 @@ const CharacterGrid: FC = () => {
   const images = [p1, p2, p3, p4, p5, p6];
 
   return (
-    <section className="flex justify-center items-center bg-black w-screen h-screen">  
+    <section className="relative flex justify-center items-center bg-black min-w-screen h-screen overflow-hidden"> 
       <Swiper
         spaceBetween={0}
         pagination={{
           clickable: true,
           dynamicBullets: true,
         }}
-        keyboard={{ enabled: true }} // Enable keyboard navigation
-        modules={[Pagination, Keyboard]} // Add Keyboard module
+        keyboard={{ enabled: true }} 
+        modules={[Pagination, Keyboard]} 
         className="w-full h-full"
         loop={true} // Loop through images for carousel effect
         autoplay={{
           delay: 3000, // Automatically slide every 3 seconds
-          disableOnInteraction: false, // Continue autoplay even after interaction
+          disableOnInteraction: false, 
         }}
       >
         {images.map((image, index) => (
@@ -40,8 +40,6 @@ const CharacterGrid: FC = () => {
               src={image.src}
               alt={`Picture ${index + 1}`}
               className="w-full h-full object-cover object-top" 
-              // `object-cover` ensures the image covers the entire screen without stretching
-              // `object-center` centers the image for better desktop view experience
             />
           </SwiperSlide>
         ))}

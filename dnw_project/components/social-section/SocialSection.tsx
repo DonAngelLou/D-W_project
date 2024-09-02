@@ -68,14 +68,14 @@ const SocialSection = () => (
               alt='Deadpool & Wolverine Logo'
               className='px-10'
             />
-            <div className='absolute -inset-y-3 inset-x-4 flex justify-end items-end'>
+            <div className='absolute -inset-y-4 md:-inset-y-3 lg:-inset-y-5 inset-x-4 flex justify-end items-end'>
               <div
-                className='flex items-center w-max px-4 -rotate-6'
+                className='flex items-center w-max px-4 md:px-5 lg:px-[1.875rem] lg:py-1 -rotate-6'
                 style={{
                   backgroundImage: "url('/social-fanzone-bg-2.png'), linear-gradient(#BD0D38, #BD0D38)",
                 }}
               >
-                <span className='tracking-tighter text-lg md:text-2xl font-medium'>FAN ZONE</span>
+                <span className='font-bebas tracking-wider text-2xl md:text-3xl'>FAN ZONE</span>
               </div>
             </div>
           </div>

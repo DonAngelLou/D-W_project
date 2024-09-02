@@ -7,6 +7,7 @@ module.exports = {
     extend: {
       fontFamily: {
         bebas: ['Bebas Neue', 'sans-serif'],
+        segoe: ['Segoe UI', 'sans-serif']
       }
     },
   },

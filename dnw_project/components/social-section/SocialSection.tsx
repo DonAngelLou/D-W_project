@@ -68,19 +68,19 @@ const SocialSection = () => (
               alt='Deadpool & Wolverine Logo'
               className='px-10'
             />
-            <div className='absolute -inset-y-3 inset-x-4 flex justify-end items-end'>
+            <div className='absolute -inset-y-4 md:-inset-y-3 lg:-inset-y-5 inset-x-4 flex justify-end items-end'>
               <div
-                className='flex items-center w-max px-4 -rotate-6'
+                className='flex items-center w-max px-4 md:px-5 lg:px-[1.875rem] lg:py-1 -rotate-6'
                 style={{
                   backgroundImage: "url('/social-fanzone-bg-2.png'), linear-gradient(#BD0D38, #BD0D38)",
                 }}
               >
-                <span className='tracking-tighter text-lg md:text-2xl font-medium'>FAN ZONE</span>
+                <span className='font-bebas tracking-wider text-2xl md:text-3xl'>FAN ZONE</span>
               </div>
             </div>
           </div>
         </div>
-        <div className='grid grid-cols-1 lg:grid-cols-2 gap-x-8 w-[335px] md:w-[410px] lg:w-[800px] lg:mt-6'>
+        <div className='grid grid-cols-1 lg:grid-cols-2 gap-x-8 w-[332px] md:w-[404px] lg:w-[840px] lg:mt-6'>
           {
             testimonialsData.map((data, index) => (
               <div key={index} className='py-3'>

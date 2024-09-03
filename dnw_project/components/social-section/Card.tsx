@@ -17,7 +17,7 @@ export type CardProps = {
 
 const Card = ({ avatarSrc, name, username, commentParagraph1, commentParagraph2, time, date, likesCount, repliesCount }: CardProps) => {
     return (
-        <div className='h-full w-full flex flex-col justify-between p-3 bg-white rounded-lg'>
+        <div className='h-full flex flex-col justify-between p-3 bg-white rounded-lg'>
             <div className='flex'>
                 <div className='relative h-[35px] w-[35px] md:h-[47px] md:w-[47px] me-2'>
                     <Image
@@ -40,12 +40,12 @@ const Card = ({ avatarSrc, name, username, commentParagraph1, commentParagraph2,
                     </div>
                 </div>
             </div>
-            <div>
-                <p className='text-black text-sm md:text-base mt-2 font-medium tracking-tight leading-tight'>{commentParagraph1}</p>
-                {commentParagraph2 && <p className='text-black text-sm md:text-base mt-4 font-medium tracking-tight leading-5'>{commentParagraph2}</p>}
+            <div className='font-segoe text-[0.9rem] md:text-[1.1rem] lg:text-[1.1rem] leading-tight'>
+                <p className='text-black mt-2'>{commentParagraph1}</p>
+                {commentParagraph2 && <p className='text-black mt-4'>{commentParagraph2}</p>}
             </div>
-            <div className="flex items-center justify-between mt-1 mb-1 md:mb-2">
-                <div className='space-x-2 font-medium text-xs md:text-sm'>
+            <div className="flex items-center justify-between mt-1 md:mt-0 mb-1 md:mb-2">
+                <div className='space-x-2 font-medium text-xs md:text-base'>
                     <small className='text-[#526371]'>{time}</small>
                     <small className='text-[#526371]'>•</small>
                     <small className='text-[#526371]'>{date}</small>

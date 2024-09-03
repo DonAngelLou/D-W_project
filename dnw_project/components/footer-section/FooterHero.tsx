@@ -2,6 +2,9 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import dNwLogo from '@/public/d&w-logo.png';
 import { IoPlay } from 'react-icons/io5';
+import { Anton } from 'next/font/google';
+
+const anton = Anton({ subsets: ['latin'], weight: '400' });
 
 const FooterHero = () => {
     return (
@@ -23,18 +26,18 @@ const FooterHero = () => {
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.8 }}
                 className="relative flex flex-col gap-10 justify-center items-center h-1/2 lg:h-[776px]">
-                <div className="relative h-[113px] md:h-[214px] lg:h-[281px] w-[325px] md:w-[616px] lg:w-[807px]">
+                <div className="relative h-[112px] md:h-[212px] lg:h-[280px] w-[296px] md:w-[596px] lg:w-[796px]">
                     <Image
                         src={dNwLogo}
                         fill
                         alt='Deadpool & Wolverine Logo'
                     />
                 </div>
-                <div className='flex justify-center gap-11 w-full tracking-tighter font-bold text-lg'>
-                    <button className='bg-[#FBDC0D] text-[#E81127] text-sm px-4 md:px-6 py-3 hover:bg-[#FBDC0D]/80'>Get Tickets Now</button>
+                <div className='flex justify-center gap-8 md:gap-14 w-full tracking-tighter font-bold text-lg'>
+                    <button className={`${anton.className} bg-gradient-to-r from-[#FBDC0D] to-[#FBDC0D] hover:from-white hover:to-[#FBDC0D] text-[#E81127] px-5 md:px-7 py-3 text-base md:text-lg lg:text-xl`}>Get Tickets Now</button>
                     <button className='flex items-center gap-3 group'>
-                        <IoPlay className='rounded-full bg-white text-slate-900 size-9 p-1 group-hover:bg-white/80' />
-                        <span className='group-hover:text-white/80'>Watch Trailer</span>
+                        <IoPlay className='rounded-full bg-white text-slate-900 size-9 p-2 group-hover:bg-white/80' />
+                        <span className={`${anton.className} group-hover:text-white/80 text-sm md:text-base lg:text-lg tracking-normal`}>Watch Trailer</span>
                     </button>
                 </div>
             </motion.div>

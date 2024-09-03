@@ -11,11 +11,11 @@ const Navbar = () => {
         setShowMobileMenu((current) => !current);
     },[setShowMobileMenu])
   return (
-    <nav className='w-full z-40'>
+    <nav className='w-full z-40 font-bebas'>
         <div className='px-4 md:px-16 py-2 md:p-4 flex justify-between transition duration-500 bg-white bg-opacity-90'>
             <img className='h-8' src='/image.png' alt='icon' />
             {/* Large Screen */}
-            <div className='flex-row ml-8 gap-7 hidden md:flex font-semibold'>
+            <div className='flex-row ml-8 gap-7 hidden md:flex text-lg'>
                  <div className='text-black cursor-pointer p-1 hover:text-[#E81127]'>About</div>
                  <div className='text-black cursor-pointer p-1 hover:text-[#E81127]'>Spotlight</div>
                  <div className='text-black cursor-pointer p-1 hover:text-[#E81127]'>Fan Zone</div>

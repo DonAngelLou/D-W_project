@@ -14,6 +14,7 @@ const Hero = () => {
 
   return (
     <section className="
+            font-bebas
             bg-[url('/bg.png')]
             bg-cover
             bg-no-repeat
@@ -25,8 +26,9 @@ const Hero = () => {
             before:bg-gradient-to-r
             before:from-[#CF1E11]
             before:to-[#CF1E11]
-            before:opacity-50
-            before:h-screen           
+            before:opacity-55
+            before:h-screen
+
             ">            
            
       <motion.div
@@ -39,42 +41,51 @@ const Hero = () => {
             bg-cover
             bg-no-repeat
             bg-center
-            
-                      
+                              
             before:absolute            
-            before:inset-x-0           
-            before:bg-gradient-to-t from-black to-transparent
-            before:opacity-50            
-            before:h-1/4
-            before:bottom-[-50px]
-            md:before:bottom-[-70px]
-            
+            before:inset-x-0     
+            before:bg-gradient-to-t from-black via-transparent to-transparent
+            before:opacity-80            
+            before:h-screen        
             "
       >
-        <div className='mt-9 text-center px-8 flex flex-col lg:max-w-[700px] z-30'>
-          <img src="/d&w-logo.png" alt="hero" className='lg:h-[250px] lg:[700px]'/>
-          <p className='mt-8'>Marvel Studios’ “Deadpool & Wolverine” delivers the ultimate, iconic, cinematic team-up throwdown. Come together in cinemas on July 24.</p>
-          <div>
-            <div className='mt-10 flex gap-10 justify-center'>
-              <button className='text-[#E81127] bg-[#FBDC0D] py-2 px-4 hover:bg-gradient-to-r hover:from-[#FFFFFF] hover:to-[#FBDC0D] font-semibold'>Get Tickets Now</button>
-              <button className='flex items-center gap-2 font-semibold'><FaPlayCircle size={35}/><span>Watch Trailer</span></button>  
+        <div className='w-full h-full flex flex-col lg:flex-row z-40'>
+          <div className='w-full h-full '>
+            <div className='lg:ml-20'>
+                <div className='lg:mt-16'>
+                  <img src="/d&w-logo.png" alt="hero" className='md:p-6 px-3 py-4 mx-auto lg:max-w-xl md:max-w-lg max-w-96'/>
+                </div>
+                <div className='flex items-center flex-col lg:items-start lg:ml-10'>
+                  <p className='text-lg lg:text-4xl lg:text-left p-6 lg:max-w-2xl md:max-w-xl'>Marvel Studios’ “Deadpool & Wolverine” delivers the ultimate, iconic, cinematic team-up throwdown. Come together in cinemas on July 24.</p>         
+                    <div className='p-6 flex gap-10 justify-center lg:justify-start'>
+                      <button className='text-[#E81127] bg-[#FBDC0D] py-2 px-4 hover:bg-gradient-to-r hover:from-[#FFFFFF] hover:to-[#FBDC0D] font-semibold '>Get Tickets Now</button>
+                      <button className='flex items-center gap-2'><FaPlayCircle size={35}/><span>Watch Trailer</span></button>  
+                    </div>
+                </div>
+
             </div>
+
+          </div>
+          <div className="w-full h-full bg-[url('/hero.png')]          
+            bg-no-repeat
+            bg-center 
+            bg-contain
+          "> 
+              
           </div>
         </div>
-        <div className='z-30'>
-          <img src="/hero.png" alt="hero" className='h-96 lg:max-h-[900px] lg:h-auto'/>
-        </div>
-        <div className='left-0 bg-white absolute top-3/4 rounded-r-full flex flex-row z-40'>
-          <p className='py-3 px-4 text-black flex items-center font-semibold ' onClick={handleShareClick}>SHARE ON<span><MdOutlineKeyboardArrowRight size={25}/></span></p> 
-          <div className={`bg-red-500 py-3 px-4 rounded-r-full text-white bg-gradient-to-r from-[#E81127] to-[#820A16] gap-3 z-40 ${sharebutton}`}>
-            <IoLogoFacebook size={20}/>
-            <FaInstagram size={20}/>
-            <FaXTwitter size={20}/>
-            <IoLogoWhatsapp size={20}/>
-            <FaThreads size={20}/>
-          </div>
-        </div>         
+                
       </motion.div>
+      <div className='left-0 bg-white absolute top-3/4 rounded-r-full flex flex-row z-40'>
+          <p className='py-4 px-5 text-black flex items-center font-semibold ' onClick={handleShareClick}>SHARE ON<span><MdOutlineKeyboardArrowRight size={25}/></span></p> 
+          <div className={`bg-red-500 py-3 px-4 rounded-r-full text-white bg-gradient-to-r from-[#E81127] to-[#820A16] gap-3 z-40 ${sharebutton}`}>
+            <IoLogoFacebook size={25}/>
+            <FaInstagram size={25}/>
+            <FaXTwitter size={25}/>
+            <IoLogoWhatsapp size={25}/>
+            <FaThreads size={25}/>
+          </div>
+        </div>
       
     </section>
   );

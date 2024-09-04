@@ -23,8 +23,8 @@ const About = () => (
     
     <div className="w-full h-full z-40">
         <div className="mt-10 flex justify-end">
-            <div className="right-0 text-3xl font-bold bg-gradient-to-r from-[#E81127] to-[#820A16]">
-                <div className="bg-[url('/bg1.png')] px-12 py-3 bg-cover">
+            <div className="right-0 text-3xl font-bold bg-gradient-to-r from-[#E81127] to-[#820A16]" style={{clipPath: "polygon(30% 0%, 100% 0, 100% 100%, 44% 100%, 0 100%)"}}>
+                <div className="bg-[url('/bg1.png')] px-12 py-3 ml-5 bg-cover">
                 ABOUT
                 </div>            
             </div>

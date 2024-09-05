@@ -3,6 +3,7 @@ import Image from 'next/image';
 import dNwLogo from '@/public/d&w-logo.png';
 import { IoPlay } from 'react-icons/io5';
 import { Anton } from 'next/font/google';
+import Link from 'next/link';
 
 const anton = Anton({ subsets: ['latin'], weight: '400' });
 
@@ -34,14 +35,15 @@ const FooterHero = () => {
                     />
                 </div>
                 <div className='flex justify-center gap-8 md:gap-14 w-full tracking-tighter font-bold text-lg'>
-                    <button className={`${anton.className} bg-gradient-to-r from-[#FBDC0D] to-[#FBDC0D] hover:from-white hover:to-[#FBDC0D] text-[#E81127] px-5 md:px-7 py-3 text-base md:text-lg lg:text-xl`}>Get Tickets Now</button>
-                    <button className='flex items-center gap-3 group'>
+                    <Link href='https://www.disney.ph/movies/deadpool-and-wolverine' target='_blank' className={`${anton.className} bg-gradient-to-r from-[#FBDC0D] to-[#FBDC0D] hover:from-white hover:to-[#FBDC0D] text-[#E81127] px-5 md:px-7 py-3 text-base md:text-lg lg:text-xl`}>Get Tickets Now</Link>
+                    <Link href='https://www.youtube.com/watch?v=Idh8n5XuYIA' target='_blank' className='flex items-center gap-3 group'>
                         <IoPlay className='rounded-full bg-white text-slate-900 size-9 p-2 group-hover:bg-white/80' />
                         <span className={`${anton.className} group-hover:text-white/80 text-sm md:text-base lg:text-lg tracking-normal`}>Watch Trailer</span>
-                    </button>
+                    </Link>
                 </div>
             </motion.div>
 
+            {/* black overlay */}
             <div className='relative w-full inset-x-0 h-[211px] bottom-0 bg-gradient-to-b from-black/0 to-black/100' />
         </section>
     )

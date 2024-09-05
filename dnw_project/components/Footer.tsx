@@ -8,6 +8,7 @@ const Footer = () => (
         src='/image.png'
         fill
         alt="Marvel Studios Logo"
+        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
       />
     </div>
     <div className="flex flex-wrap">

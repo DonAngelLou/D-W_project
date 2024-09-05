@@ -53,13 +53,13 @@ const Hero = () => {
           <div className='w-full h-full '>
             <div className='lg:ml-20'>
                 <div className='lg:mt-16'>
-                  <img src="/d&w-logo.png" alt="hero" className='md:p-6 px-3 py-4 mx-auto lg:max-w-xl md:max-w-lg max-w-96'/>
+                  <img src="/d&w-logo.png" alt="hero" className='md:p-6 px-3 py-4 mx-auto lg:max-w-xl md:max-w-lg max-w-80'/>
                 </div>
                 <div className='flex items-center flex-col lg:items-start lg:ml-10'>
-                  <p className='text-lg lg:text-4xl lg:text-left p-6 lg:max-w-2xl md:max-w-xl'>Marvel Studios’ “Deadpool & Wolverine” delivers the ultimate, iconic, cinematic team-up throwdown. Come together in cinemas on July 24.</p>         
+                  <p className='text-lg lg:text-4xl lg:text-left p-6 lg:max-w-2xl md:max-w-xl sm:max-w-lg text-center'>Marvel Studios’ “Deadpool & Wolverine” delivers the ultimate, iconic, cinematic team-up throwdown. Come together in cinemas on July 24.</p>         
                     <div className='p-6 flex gap-10 justify-center lg:justify-start'>
                       <button className='text-[#E81127] bg-[#FBDC0D] py-2 px-4 hover:bg-gradient-to-r hover:from-[#FFFFFF] hover:to-[#FBDC0D] font-semibold '>Get Tickets Now</button>
-                      <button className='flex items-center gap-2'><FaPlayCircle size={35}/><span>Watch Trailer</span></button>  
+                      <button className='flex items-center gap-2 hover:text-white/80'><FaPlayCircle size={35}/><span>Watch Trailer</span></button>  
                     </div>
                 </div>
 

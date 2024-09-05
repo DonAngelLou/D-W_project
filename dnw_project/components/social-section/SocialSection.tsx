@@ -5,6 +5,11 @@ import testimonialPhoto1 from '@/public/testimonial-photo-1.png';
 import testimonialPhoto2 from '@/public/testimonial-photo-2.png';
 import testimonialPhoto3 from '@/public/testimonial-photo-3.png';
 import testimonialPhoto4 from '@/public/testimonial-photo-4.png';
+import redVectorMb from '@/public/social-red-mb.png';
+import redVectorMd from '@/public/social-red-md.png';
+import redVectorLg from '@/public/social-red-lg.png';
+import yellowVectorMd from '@/public/social-yellow-md.png'
+import yellowVectorLg from '@/public/social-yellow-lg.png'
 import Card from './Card';
 import { CardProps } from './Card';
 
@@ -53,7 +58,18 @@ const testimonialsData: CardProps[] = [
 
 const SocialSection = () => (
   <>
-    <section className='h-max social-bg-container'>
+    <section className='relative h-max lg: social-bg-container'>
+      {/* red vector mobile */}
+      <img src={redVectorMb.src} alt="Red Vector" className='md:hidden absolute bottom-0 left-0' />
+      {/* red vector md */}
+      <img src={redVectorMd.src} alt="Red Vector" className='hidden md:block lg:hidden absolute bottom-0 left-0' />
+      {/* red vector lg */}
+      <img src={redVectorLg.src} alt="Red Vector" className='hidden lg:block absolute bottom-0 left-0' />
+      {/* yellow vector md */}
+      <img src={yellowVectorMd.src} alt="Yellow Vector" className='hidden md:block lg:hidden absolute bottom-0 right-0' />
+      {/* yellow vector lg */}
+      <img src={yellowVectorLg.src} alt="Yellow Vector" className='hidden lg:block absolute bottom-0 right-0' />
+
       <motion.div
         initial={{ y: 100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
@@ -61,7 +77,7 @@ const SocialSection = () => (
         className='grid relative place-items-center py-12'
       >
         <div className='flex justify-center my-10 w-full'>
-          <div className="relative h-[96px] md:h-[152px] lg:h-[176px] w-[328px] md:w-[408px] lg:w-[464px]">
+          <div className="relative h-[96px] md:h-[152px] lg:h-[176px] w-[320px] md:w-[408px] lg:w-[464px]">
             <Image
               src={dNwLogo}
               fill
@@ -80,28 +96,31 @@ const SocialSection = () => (
             </div>
           </div>
         </div>
-        <div className='grid grid-cols-1 lg:grid-cols-2 gap-x-8 w-[332px] md:w-[404px] lg:w-[840px] lg:mt-6'>
-          {
-            testimonialsData.map((data, index) => (
-              <div key={index} className='py-3'>
-                <Card
-                  avatarSrc={data.avatarSrc}
-                  name={data.name}
-                  username={data.username}
-                  commentParagraph1={data.commentParagraph1}
-                  commentParagraph2={data.commentParagraph2}
-                  time={data.time}
-                  date={data.date}
-                  likesCount={data.likesCount}
-                  repliesCount={data.repliesCount}
-                />
-              </div>
-            ))
-          }
+        <div className='social-deadpool-bg z-10 h-full w-full'>
+          <div className='grid grid-cols-1 lg:grid-cols-2 gap-x-8 w-[320px] md:w-[404px] lg:w-[840px] lg:mt-6 mx-auto px-2 w-375:p-0'>
+            {
+              testimonialsData.map((data, index) => (
+                <div key={index} className='py-3 z-10'>
+                  <Card
+                    avatarSrc={data.avatarSrc}
+                    name={data.name}
+                    username={data.username}
+                    commentParagraph1={data.commentParagraph1}
+                    commentParagraph2={data.commentParagraph2}
+                    time={data.time}
+                    date={data.date}
+                    likesCount={data.likesCount}
+                    repliesCount={data.repliesCount}
+                  />
+                </div>
+              ))
+            }
+          </div>
         </div>
       </motion.div>
 
-      <div className='relative z-20'>
+      {/* black overlay */}
+      <div className='relative z-10 lg:h-[211px]'>
         <div className='absolute w-full bottom-0 h-[211px] bg-gradient-to-b from-black/0 to-black/100' />
       </div>
     </section>

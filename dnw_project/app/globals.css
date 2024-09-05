@@ -37,14 +37,14 @@ body {
     linear-gradient(#000000BF, #000000BF),
     url('/social-fanzone-bg-1.png');
   background-position:
-    -38px 213px,
-    -70px 760px,
+    top 196px left -30px,
+    bottom -200px right -328px,
     center,
     center,
     center;
   background-size:
-    430px,
-    850px 770px,
+    420px,
+    700px,
     cover,
     cover,
     cover;
@@ -54,14 +54,32 @@ body {
 @media (min-width: 768px) {
   .social-bg-container {
     background-position:
-      -18px 380px,
-      355px 700px,
+      top 376px left -16px,
+      top 692px right -240px,
       center,
       center,
       center;
     background-size:
-      380px 550px,
-      680px 630px,
+      388px 536px,
+      640px 628px,
+      cover,
+      cover,
+      cover;
+  }
+}
+
+
+@media (min-width: 1024px) {
+  .social-bg-container {
+    background-position:
+      top 196px left clamp(-36px, 13vw, 252px),
+      top 164px right clamp(-300px, -1vw, -20px),
+      center,
+      center,
+      center;
+    background-size:
+      480px 740px,
+      780px 820px,
       cover,
       cover,
       cover;

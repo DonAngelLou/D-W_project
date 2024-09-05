@@ -8,12 +8,13 @@ const Footer = () => (
         src='/image.png'
         fill
         alt="Marvel Studios Logo"
+        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
       />
     </div>
-    <div>
-      <Link href='/' className="hover:bg-[#E81127] hover:text-white px-4 py-2 transition duration-200">ABOUT</Link>
-      <Link href='/' className="hover:bg-[#E81127] hover:text-white px-4 py-2 transition duration-200">SPOTLIGHTS</Link>
-      <Link href='/' className="hover:bg-[#E81127] hover:text-white px-4 py-2 transition duration-200">FAN ZONE</Link>
+    <div className="flex flex-wrap">
+      <Link href='/' className="hover:text-[#E81127] px-3 md:px-4 transition duration-200">ABOUT</Link>
+      <Link href='/' className="hover:text-[#E81127] px-3 md:px-4 transition duration-200">SPOTLIGHTS</Link>
+      <Link href='/' className="hover:text-[#E81127] px-3 md:px-4 transition duration-200">FAN ZONE</Link>
     </div>
     <hr className="border border-black/50 w-full" />
     <p className="text-center">&copy; 2024 DEADPOOL & WOLVERINE FAN PROJECT. ALL RIGHTS RESERVED.</p>

@@ -7,8 +7,8 @@ import About from '../components/About';
 import SwiperSection from '../components/SwiperSection';
 import CharacterGrid from '../components/CharacterGrid';
 import SocialSection from '@/components/social-section/SocialSection';
-import Footer from '../components/footer-section/Footer';
-import FooterHero from '@/components/footer-section/FooterHero';
+import Footer from '../components/Footer';
+import FooterHero from '@/components/FooterHero';
 import Navbar from '@/components/Navbar';
 
 export default function HomePage() {

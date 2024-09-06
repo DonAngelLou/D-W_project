@@ -6,8 +6,7 @@ const About = () => (
             bg-cover
             bg-no-repeat
             bg-center
-            h-screen
-            
+                    
             before:absolute            
             before:inset-x-0     
             before:bg-gradient-to-b from-black via-transparent to-black
@@ -17,24 +16,23 @@ const About = () => (
             flex
             flex-col
             md:flex-row-reverse
-            font-bebas
-            
+            font-bebas           
   ">       
     
     <div className="w-full h-full z-40">
-        <div className="mt-10 flex justify-end">
+        <div className="md:mt-10 mt-2 flex justify-end">
             <div className="right-0 text-3xl font-bold bg-gradient-to-r from-[#E81127] to-[#820A16]" style={{clipPath: "polygon(30% 0%, 100% 0, 100% 100%, 44% 100%, 0 100%)"}}>
-                <div className="bg-[url('/bg1.png')] px-12 py-3 ml-5 bg-cover">
+                <div className="bg-[url('/bg1.png')] px-12 py-3 ml-5 bg-auto">
                 ABOUT
                 </div>            
             </div>
         </div>
         <div className="flex flex-col items-end text-right mr-3 lg:max-w-3xl lg:items-start lg:text-left p-6">
-          <h1 className="font-normal text-3xl lg:text-4xl mt-6 md:mt-10">Synopsis</h1>
+          <h1 className="font-normal text-3xl lg:text-4xl md:mt-10">Synopsis</h1>
           <h3 className="text-stone-300 text-xl">Deadpool and Wolverine team up in an epic adventure that blends humor, action, and mutant mayhem. When a new threat emerges, these unlikely allies must work together to save the world.</h3>
         </div>
         
-        <div className=" flex flex-col items-end mr-5 uppercase lg:items-start p-6">
+        <div className=" flex flex-col items-end mr-5 uppercase lg:items-start px-2">
           <h1 className="font-normal text-3xl lg:mt-6 lg:text-4xl mt-2" >Director</h1>
           <div className="flex items-center gap-2"> 
                   <img className="w-10 h-10 rounded-full " src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Shawn_Levy_by_Gage_Skidmore_2.jpg/1200px-Shawn_Levy_by_Gage_Skidmore_2.jpg" alt=""/>
@@ -79,7 +77,7 @@ const About = () => (
         </div> 
         
     </div>
-    <div className="w-full h-full z-40  bg-[url('/abouthero.png')] bg-no-repeat bg-cover bg-center flex justify-center items-center rounded-full">
+    <div className="w-full h-screen z-40 bg-[url('/abouthero.png')] bg-no-repeat bg-cover bg-center flex justify-center items-center rounded-full">
       <div className="flex items-center justify-center h-44 w-44 bg-white rounded-full bg-opacity-20 lg:h-52 lg:w-52">
         <div className="flex items-center justify-center h-36 w-36 bg-white rounded-full bg-opacity-50 lg:h-44 lg:w-44">
           <div className="flex items-center justify-center h-28 w-28 bg-white rounded-full bg-opacity-70 lg:h-36 lg:w-36">

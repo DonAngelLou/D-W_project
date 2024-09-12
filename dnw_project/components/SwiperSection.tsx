@@ -19,7 +19,7 @@ import red2 from '../public/red2.png';
 
 const SpotlightSection: FC = () => {
   return (
-    <section className="relative w-full h-full bg-black py-16 lg:py-24 overflow-hidden">
+    <section className="relative w-full h-full bg-black py-16 lg:py-24 overflow-hidden" id='spotlight'>
       {/* Background Image with Dark Overlay */}
       <div
         className="absolute inset-0 bg-cover bg-left-top"

@@ -58,7 +58,7 @@ const testimonialsData: CardProps[] = [
 
 const SocialSection = () => (
   <>
-    <section className='relative h-max lg: social-bg-container'>
+    <section className='relative h-max lg: social-bg-container' id='fanzone'>
       {/* red vector mobile */}
       <img src={redVectorMb.src} alt="Red Vector" className='md:hidden absolute bottom-0 left-0' />
       {/* red vector md */}

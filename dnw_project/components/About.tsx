@@ -16,13 +16,13 @@ const About = () => (
             flex
             flex-col
             md:flex-row-reverse
-            font-bebas           
-  ">       
+            font-bebas"
+            id="about">       
     
-    <div className="w-full h-full z-40">
+    <div className="w-full h-max z-30">
         <div className="md:mt-10 mt-2 flex justify-end">
-            <div className="right-0 text-3xl font-bold bg-gradient-to-r from-[#E81127] to-[#820A16]" style={{clipPath: "polygon(30% 0%, 100% 0, 100% 100%, 44% 100%, 0 100%)"}}>
-                <div className="bg-[url('/bg1.png')] px-12 py-3 ml-5 bg-auto">
+            <div className="lg:mt-20 right-0 text-3xl font-bold bg-gradient-to-r from-[#E81127] to-[#820A16]" style={{clipPath: "polygon(30% 0%, 100% 0, 100% 100%, 44% 100%, 0 100%)"}}>
+                <div className="bg-[url('/bg1.png')] px-12 py-4 ml-5 lg:px-16 lg:py-5 bg-auto">
                 ABOUT
                 </div>            
             </div>
@@ -32,10 +32,10 @@ const About = () => (
           <h3 className="text-stone-300 text-xl">Deadpool and Wolverine team up in an epic adventure that blends humor, action, and mutant mayhem. When a new threat emerges, these unlikely allies must work together to save the world.</h3>
         </div>
         
-        <div className=" flex flex-col items-end mr-5 uppercase lg:items-start px-2">
+        <div className=" flex flex-col items-end mr-5 uppercase lg:items-start px-6">
           <h1 className="font-normal text-3xl lg:mt-6 lg:text-4xl mt-2" >Director</h1>
           <div className="flex items-center gap-2"> 
-                  <img className="w-10 h-10 rounded-full " src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Shawn_Levy_by_Gage_Skidmore_2.jpg/1200px-Shawn_Levy_by_Gage_Skidmore_2.jpg" alt=""/>
+                  <img className="w-10 h-10 rounded-full" src="https://www.mtlblog.com/media-library/shawn-levy-poses-for-a-stranger-things-premiere.png?id=38557981&width=600&height=600&coordinates=357%2C0%2C219%2C0" alt=""/>
                     <div className="text-stone-300 text-xl">
                         <div>Shawn Levy</div>
                     </div>
@@ -43,25 +43,25 @@ const About = () => (
             <h1 className="font-medium text-3xl lg:mt-6 lg:text-4xl mt-2" >Writer</h1>
             <div className="flex flex-wrap justify-end gap-3 md:flex-col lg:flex-row lg:max-w-xl lg:justify-start">
                 <div className="flex items-center gap-2"> 
-                  <img className="w-10 h-10 rounded-full" src="https://ntvb.tmsimg.com/assets/assets/57282_v9_bc.jpg?w=360&h=480" alt=""/>
+                  <img className="w-10 h-10 rounded-full object-center" src="https://i.pinimg.com/736x/16/d9/c1/16d9c1e215fc22caf35911d021e24d4e.jpg" alt=""/>
                     <div className="text-stone-300 text-xl">
                         <div>Ryan Reynolds</div>
                     </div>
                 </div>
                 <div className="flex items-center gap-2"> 
-                  <img className="w-10 h-10 rounded-full" src="https://vz.cnwimg.com/thumbc-338x338/wp-content/uploads/2018/06/Rhett-Reese.jpg" alt=""/>
+                  <img className="w-10 h-10 rounded-full" src="https://images.iptv.rt.ru/images/cpt8tmjir4sqiatbcukg.jpg" alt=""/>
                     <div className="text-stone-300 text-xl">
                         <div>Rhett Reese</div>
                     </div>
                 </div>
                 <div className="flex items-center gap-2"> 
-                  <img className="w-10 h-10 rounded-full" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Zeb_Wells_by_Gage_Skidmore_2.jpg/1200px-Zeb_Wells_by_Gage_Skidmore_2.jpg" alt=""/>
+                  <img className="w-10 h-10 rounded-full" src="https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/772413_v9_bb.jpg" alt=""/>
                     <div className="text-stone-300 text-xl">
                         <div>Zeb Wells</div>
                     </div>
                 </div>
                 <div className="flex items-center gap-2"> 
-                  <img className="w-10 h-10 rounded-full" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Shawn_Levy_by_Gage_Skidmore_2.jpg/1200px-Shawn_Levy_by_Gage_Skidmore_2.jpg" alt=""/>
+                  <img className="w-10 h-10 rounded-full" src='https://www.mtlblog.com/media-library/shawn-levy-poses-for-a-stranger-things-premiere.png?id=38557981&width=600&height=600&coordinates=357%2C0%2C219%2C0' alt=""/>
                     <div className="text-stone-300 text-xl">
                         <div>Shawn Levy</div>
                     </div>
@@ -77,7 +77,7 @@ const About = () => (
         </div> 
         
     </div>
-    <div className="w-full h-screen z-40 bg-[url('/abouthero.png')] bg-no-repeat bg-cover bg-center flex justify-center items-center rounded-full">
+    <div className="w-full h-screen z-30 bg-[url('/abouthero.png')] bg-no-repeat bg-cover bg-center flex justify-center items-center rounded-full">
       <div className="flex items-center justify-center h-44 w-44 bg-white rounded-full bg-opacity-20 lg:h-52 lg:w-52">
         <div className="flex items-center justify-center h-36 w-36 bg-white rounded-full bg-opacity-50 lg:h-44 lg:w-44">
           <div className="flex items-center justify-center h-28 w-28 bg-white rounded-full bg-opacity-70 lg:h-36 lg:w-36">

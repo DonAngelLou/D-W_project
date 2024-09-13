@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import { useState } from 'react';
 import { FaPlayCircle } from "react-icons/fa";
 import { FaThreads,FaXTwitter,FaInstagram } from "react-icons/fa6";
@@ -35,7 +36,9 @@ const Hero = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
-        className="flex flex-col items-center lg:flex-row justify-center gap-10 lg:basis-1/2 w-full h-screen
+        className="flex flex-col items-center lg:flex-row justify-center gap-10 lg:basis-1/2 w-full h-full
+
+            
 
             bg-[url('/bg1.png')]
             bg-cover
@@ -49,17 +52,17 @@ const Hero = () => {
             before:h-screen        
             "
       >
-        <div className='w-full h-full flex flex-col lg:flex-row z-40'>
-          <div className='w-full h-full '>
+        <div className='w-full h-full flex flex-col lg:flex-row z-30 pt-20'>
+          <div className='w-full h-max '>
             <div className='lg:ml-20'>
                 <div className='lg:mt-16'>
                   <img src="/d&w-logo.png" alt="hero" className='md:p-6 px-3 py-4 mx-auto lg:max-w-xl md:max-w-lg max-w-80'/>
                 </div>
                 <div className='flex items-center flex-col lg:items-start lg:ml-10'>
                   <p className='text-lg lg:text-4xl lg:text-left p-6 lg:max-w-2xl md:max-w-xl sm:max-w-lg text-center'>Marvel Studios’ “Deadpool & Wolverine” delivers the ultimate, iconic, cinematic team-up throwdown. Come together in cinemas on July 24.</p>         
-                    <div className='p-6 flex gap-10 justify-center lg:justify-start'>
-                      <button className='text-[#E81127] bg-[#FBDC0D] py-2 px-4 hover:bg-gradient-to-r hover:from-[#FFFFFF] hover:to-[#FBDC0D] font-semibold '>Get Tickets Now</button>
-                      <button className='flex items-center gap-2 hover:text-white/80'><FaPlayCircle size={35}/><span>Watch Trailer</span></button>  
+                    <div className='px-6 py-2 flex gap-10 justify-center lg:justify-start'>
+                      <Link href='https://www.disney.ph/movies/deadpool-and-wolverine' target="_blank" className='text-[#E81127] bg-[#FBDC0D] py-2 px-4 hover:bg-gradient-to-r hover:from-[#FFFFFF] hover:to-[#FBDC0D] font-semibold '>Get Tickets Now</Link>
+                      <Link href='https://www.youtube.com/watch?v=Idh8n5XuYIA' target="_blank" className='flex items-center gap-2 hover:text-white/80'><FaPlayCircle size={35}/><span>Watch Trailer</span></Link>  
                     </div>
                 </div>
 
@@ -76,7 +79,7 @@ const Hero = () => {
         </div>
                 
       </motion.div>
-      <div className='left-0 bg-white absolute top-3/4 rounded-r-full flex flex-row z-40'>
+      <div className='left-0 bg-white absolute top-3/4 rounded-r-full flex flex-row z-30'>
           <p className='py-4 px-5 text-black flex items-center font-semibold ' onClick={handleShareClick}>SHARE ON<span><MdOutlineKeyboardArrowRight size={25}/></span></p> 
           <div className={`bg-red-500 py-3 px-4 rounded-r-full text-white bg-gradient-to-r from-[#E81127] to-[#820A16] gap-3 z-40 ${sharebutton}`}>
             <IoLogoFacebook size={25}/>

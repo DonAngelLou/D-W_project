@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { FaPlayCircle } from "react-icons/fa";
 
 const About = () => (
@@ -21,7 +22,7 @@ const About = () => (
     
     <div className="w-full h-max z-30">
         <div className="md:mt-10 mt-2 flex justify-end">
-            <div className="lg:mt-20 right-0 text-3xl font-bold bg-gradient-to-r from-[#E81127] to-[#820A16]" style={{clipPath: "polygon(30% 0%, 100% 0, 100% 100%, 44% 100%, 0 100%)"}}>
+            <div className="lg:mt-20 mt-16 right-0 text-3xl font-bold bg-gradient-to-r from-[#E81127] to-[#820A16]" style={{clipPath: "polygon(30% 0%, 100% 0, 100% 100%, 44% 100%, 0 100%)"}}>
                 <div className="bg-[url('/bg1.png')] px-12 py-4 ml-5 lg:px-16 lg:py-5 bg-auto">
                 ABOUT
                 </div>            
@@ -34,44 +35,44 @@ const About = () => (
         
         <div className=" flex flex-col items-end mr-5 uppercase lg:items-start px-6">
           <h1 className="font-normal text-3xl lg:mt-6 lg:text-4xl mt-2" >Director</h1>
-          <div className="flex items-center gap-2"> 
-                  <img className="w-10 h-10 rounded-full" src="https://www.mtlblog.com/media-library/shawn-levy-poses-for-a-stranger-things-premiere.png?id=38557981&width=600&height=600&coordinates=357%2C0%2C219%2C0" alt=""/>
+          <Link href='https://www.imdb.com/name/nm0506613/?ref_=tt_ov_dr' target="_blank" className="flex items-center gap-2"> 
+                  <img className="w-10 h-10 rounded-full" src="shawnlevy.jpg" alt=""/>
                     <div className="text-stone-300 text-xl">
                         <div>Shawn Levy</div>
                     </div>
-                </div>
+                </Link>
             <h1 className="font-medium text-3xl lg:mt-6 lg:text-4xl mt-2" >Writer</h1>
             <div className="flex flex-wrap justify-end gap-3 md:flex-col lg:flex-row lg:max-w-xl lg:justify-start">
-                <div className="flex items-center gap-2"> 
-                  <img className="w-10 h-10 rounded-full object-center" src="https://i.pinimg.com/736x/16/d9/c1/16d9c1e215fc22caf35911d021e24d4e.jpg" alt=""/>
+                <Link  href='https://www.imdb.com/name/nm0005351/?ref_=tt_ov_wr' target="_blank" className="flex items-center gap-2"> 
+                  <img className="w-10 h-10 rounded-full object-center" src="ryanreynolds.jpg" alt=""/>
                     <div className="text-stone-300 text-xl">
                         <div>Ryan Reynolds</div>
                     </div>
-                </div>
-                <div className="flex items-center gap-2"> 
-                  <img className="w-10 h-10 rounded-full" src="https://images.iptv.rt.ru/images/cpt8tmjir4sqiatbcukg.jpg" alt=""/>
+                </Link>
+                <Link href='https://www.imdb.com/name/nm1014201/?ref_=nv_sr_srsg_0_tt_2_nm_6_in_0_q_rhett' target="_blank" className="flex items-center gap-2"> 
+                  <img className="w-10 h-10 rounded-full" src="rhettreese.jpg" alt=""/>
                     <div className="text-stone-300 text-xl">
                         <div>Rhett Reese</div>
                     </div>
-                </div>
-                <div className="flex items-center gap-2"> 
-                  <img className="w-10 h-10 rounded-full" src="https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/772413_v9_bb.jpg" alt=""/>
+                </Link>
+                <Link href='https://www.imdb.com/name/nm2745845/?ref_=fn_al_nm_1' target="_blank"className="flex items-center gap-2"> 
+                  <img className="w-10 h-10 rounded-full" src="zebwells.jpg" alt=""/>
                     <div className="text-stone-300 text-xl">
                         <div>Zeb Wells</div>
                     </div>
-                </div>
-                <div className="flex items-center gap-2"> 
-                  <img className="w-10 h-10 rounded-full" src='https://www.mtlblog.com/media-library/shawn-levy-poses-for-a-stranger-things-premiere.png?id=38557981&width=600&height=600&coordinates=357%2C0%2C219%2C0' alt=""/>
+                </Link>
+                <Link href='https://www.imdb.com/name/nm0506613/?ref_=fn_al_nm_1' target="_blank" className="flex items-center gap-2"> 
+                  <img className="w-10 h-10 rounded-full" src="shawnlevy.jpg" alt=""/>
                     <div className="text-stone-300 text-xl">
                         <div>Shawn Levy</div>
                     </div>
-                </div>
-                <div className="flex items-center gap-2"> 
-                  <img className="w-10 h-10 rounded-full" src="https://m.media-amazon.com/images/M/MV5BMjE3MjQxNTc3OV5BMl5BanBnXkFtZTgwMDk0NDE1NTM@._V1_.jpg" alt=""/>
+                </Link>
+                <Link href='https://www.imdb.com/name/nm1116660/?ref_=nv_sr_srsg_0_tt_3_nm_5_in_0_q_paul%2520wer' target="_blank" className="flex items-center gap-2"> 
+                  <img className="w-10 h-10 rounded-full" src="paulwernick.jpg" alt=""/>
                     <div className="text-stone-300 text-xl">
                         <div>Paul Wernick</div>
                     </div>
-                </div>
+                </Link>
             </div>
  
         </div> 

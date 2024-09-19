@@ -79,9 +79,9 @@ const Hero = () => {
         </div>
                 
       </motion.div>
-      <div className='left-0 bg-white absolute top-3/4 rounded-r-full flex flex-row z-30'>
-          <p className='py-4 px-5 text-black flex items-center font-semibold ' onClick={handleShareClick}>SHARE ON<span><MdOutlineKeyboardArrowRight size={25}/></span></p> 
-          <div className={`bg-red-500 py-3 px-4 rounded-r-full text-white bg-gradient-to-r from-[#E81127] to-[#820A16] gap-3 z-40 ${sharebutton}`}>
+      <div className='left-0 bg-white absolute top-3/4 rounded-r-full flex flex-row z-30 items-center'>
+          <p className='py-3 px-4 text-black flex items-center font-semibold ' onClick={handleShareClick}>SHARE ON<span><MdOutlineKeyboardArrowRight size={25}/></span></p> 
+          <div className={`flex items-center bg-red-500 py-3 px-4 rounded-r-full text-white bg-gradient-to-r from-[#E81127] to-[#820A16] gap-3 z-40 ${sharebutton}`}>
             <IoLogoFacebook size={25}/>
             <FaInstagram size={25}/>
             <FaXTwitter size={25}/>

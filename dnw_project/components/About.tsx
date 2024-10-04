@@ -28,7 +28,7 @@ const About = () => (
             font-bebas"
   >
 
-    <div className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black opacity-95" />
+    <div className="absolute inset-0 bg-gradient-to-b from-black via-black/30 to-black opacity-95" />
 
     <div className="z-10 w-full">
       <div className="md:mt-10 mt-2 flex justify-end">

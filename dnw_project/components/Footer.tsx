@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Link from "next/link";
+import ScrollLink from "./ScrollLink";
 
 const Footer = () => (
   <footer className="h-max p-12 md:py-24 md:px-32 bg-white text-black flex flex-col gap-6 md:gap-10 justify-center items-center font-bebas md:text-lg lg:text-xl">
@@ -11,10 +11,10 @@ const Footer = () => (
         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
       />
     </div>
-    <div className="flex flex-wrap">
-      <Link href='/' className="hover:text-[#E81127] px-3 md:px-4 transition duration-200">ABOUT</Link>
-      <Link href='/' className="hover:text-[#E81127] px-3 md:px-4 transition duration-200">SPOTLIGHTS</Link>
-      <Link href='/' className="hover:text-[#E81127] px-3 md:px-4 transition duration-200">FAN ZONE</Link>
+    <div className="flex flex-wrap gap-6">
+      <ScrollLink id="about">ABOUT</ScrollLink>
+      <ScrollLink id="spotlight">SPOTLIGHTS</ScrollLink>
+      <ScrollLink id="fanzone">FAN ZONE</ScrollLink>
     </div>
     <hr className="border border-black/50 w-full" />
     <p className="text-center">&copy; 2024 DEADPOOL & WOLVERINE FAN PROJECT. ALL RIGHTS RESERVED.</p>

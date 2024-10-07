@@ -31,7 +31,7 @@ const About = () => (
     <div className="absolute inset-0 bg-gradient-to-b from-black via-black/30 to-black opacity-95" />
 
     <div className="z-10 w-full">
-      <div className="md:mt-10 mt-2 flex justify-end">
+      <div className="md:mt-3 mt-2 flex justify-end">
         <div className="lg:mt-20 mt-16 right-0 text-3xl font-bold bg-gradient-to-r from-[#E81127] to-[#820A16]" style={{ clipPath: "polygon(30% 0%, 100% 0, 100% 100%, 44% 100%, 0 100%)" }}>
           <div className="bg-[url('/bg1.png')] w-[212px] h-[68px] lg:w-[400px] lg:h-[100px] bg-auto flex justify-center items-center">
             <span className="ms-10">ABOUT</span>
@@ -39,12 +39,12 @@ const About = () => (
         </div>
       </div>
       <div className="flex flex-col items-end text-right lg:max-w-3xl lg:items-start lg:text-left p-6">
-        <h1 className="font-normal text-2xl md:text-3xl md:mt-10">Synopsis</h1>
+        <h1 className="font-normal text-2xl md:text-3xl md:mt-5">Synopsis</h1>
         <h3 className="text-stone-300 text-lg lg:text-xl">Deadpool and Wolverine team up in an epic adventure that blends humor, action, and mutant mayhem. When a new threat emerges, these unlikely allies must work together to save the world.</h3>
       </div>
 
       <div className=" flex flex-col items-end uppercase lg:items-start px-6">
-        <h1 className="font-normal text-2xl lg:mt-6 md:text-3xl mt-2" >Director</h1>
+        <h1 className="font-normal text-2xl lg:mt-3 md:text-3xl mt-2" >Director</h1>
         <Link href='https://www.imdb.com/name/nm0506613/?ref_=tt_ov_dr' target="_blank" className="flex items-center gap-2">
           <img className="w-10 h-10 rounded-full" src="shawnlevy.jpg" alt="" />
           <p className="text-stone-300 text-lg lg:text-xl">

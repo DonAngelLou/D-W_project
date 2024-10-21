@@ -83,7 +83,7 @@ const About = () => (
         </div>
       </div>
 
-      <div className="relative h-[600px] lg:h-[760px] md:inset-x-10 md:inset-y-12 z-10 flex justify-center items-center bg-[url('/abouthero.png')] w-[100%] bg-no-repeat bg-center bg-auto md:bg-cover">
+      <div className="relative h-[600px] lg:h-[760px] md:inset-x-10 md:inset-y-12 z-10 flex justify-center items-center bg-[url('/abouthero.png')] w-full bg-no-repeat bg-center bg-cover">
         <div className="flex items-center justify-center bg-white/30 size-48 lg:size-72 rounded-full">
           <div className="flex items-center justify-center bg-white/40 size-36 rounded-full lg:size-60">
             <div className="flex items-center justify-center bg-white/50 size-24 lg:size-44 rounded-full">

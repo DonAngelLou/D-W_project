@@ -25,7 +25,7 @@ const Hero = () => {
           <img
             src="/d&w-logo.png"
             alt="Deadpool and Wolverine"
-            className="w-[80%] max-w-xs md:max-w-sm lg:max-w-md mt-10 lg:mt-0 transition-all duration-500 ease-in-out"
+            className="w-[80%] max-w-xs md:max-w-sm lg:max-w-md mt-10 lg:mt-0 transition-all duration-500 ease-in-out" // Apply larger margin-top only on lg (desktop view)
           />
           <p className="text-center lg:text-left text-base md:text-lg lg:text-2xl max-w-xs md:max-w-lg lg:max-w-xl transition-all duration-500 ease-in-out">
             Marvel Studios’ “Deadpool & Wolverine” delivers the ultimate, iconic, cinematic team-up throwdown. Come together in cinemas on July 24.
@@ -47,12 +47,12 @@ const Hero = () => {
 
         {/* Right Background Section */}
         <div
-          className="relative w-full flex items-center lg:items-end justify-center h-auto md:h-full lg:h-full lg:max-w-[47%] transition-all duration-500 ease-in-out"
+          className="relative w-full flex items-center lg:items-end justify-center h-auto md:h-full lg:h-full lg:max-w-[47%] lg:mt-20 transition-all duration-500 ease-in-out"
         >
           <img
             src="/hero.png"
             alt="Deadpool and Wolverine"
-            className="w-[70%] md:w-[55%] lg:w-full h-auto object-contain md:object-cover lg:object-cover transition-all duration-500 ease-in-out"
+            className="w-[70%] md:w-[55%] lg:w-full h-auto object-contain md:object-cover lg:object-cover lg:mt-6 transition-all duration-500 ease-in-out" 
           />
         </div>
       </motion.div>
@@ -62,13 +62,13 @@ const Hero = () => {
         <motion.div
           onClick={handleShareClick}
           className="flex items-center cursor-pointer"
-          initial={{ width: '100px', borderRadius: '50px' }} // Fully rounded in collapsed state
+          initial={{ width: '100px', borderRadius: '50px' }} 
           animate={{
-            width: shareButton ? '300px' : '100px', // Shortened expanded width to 300px
-            borderRadius: shareButton ? '30px 50px 50px 30px' : '50px', // Square left, rounded right in expanded state
+            width: shareButton ? '300px' : '100px', 
+            borderRadius: shareButton ? '30px 50px 50px 30px' : '50px', 
             background: shareButton
-              ? 'linear-gradient(to right, #E81127, #820A16)' // Red gradient background in expanded state
-              : '#ffffff', // White background in collapsed state
+              ? 'linear-gradient(to right, #E81127, #820A16)' 
+              : '#ffffff', 
             color: shareButton ? '#ffffff' : '#000000',
           }}
           transition={{ duration: 0.5 }}

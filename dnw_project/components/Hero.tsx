@@ -25,7 +25,7 @@ const Hero = () => {
           <img
             src="/d&w-logo.png"
             alt="Deadpool and Wolverine"
-            className="w-[80%] max-w-xs md:max-w-sm lg:max-w-md mt-10 lg:mt-0 transition-all duration-500 ease-in-out" // Apply larger margin-top only on lg (desktop view)
+            className="w-[80%] max-w-xs md:max-w-sm lg:max-w-md mt-10 lg:mt-0 md:pt-10 transition-all duration-500 ease-in-out" // Apply larger margin-top only on lg (desktop view)
           />
           <p className="text-center lg:text-left text-base md:text-lg lg:text-2xl max-w-xs md:max-w-lg lg:max-w-xl transition-all duration-500 ease-in-out">
             Marvel Studios’ “Deadpool & Wolverine” delivers the ultimate, iconic, cinematic team-up throwdown. Come together in cinemas on July 24.

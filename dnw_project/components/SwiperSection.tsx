@@ -47,7 +47,7 @@ const SpotlightSection: FC = () => {
       <div className="absolute top-0 left-0 w-screen h-[300px] bg-[url('/black_overlay.png')] bg-no-repeat bg-top bg-cover" />
 
       {/* Core Content */}
-      <div className="relative z-10 mx-[5%]">
+      <div className="relative z-10 mx-[5%] md:mt-10">
         {/* Centered SPOTLIGHT Title */}
         <div className="text-center mb-8 mt-18">
           <h2 className="text-yellow-500 font-bebas text-6xl font-bold">SPOTLIGHTS</h2>

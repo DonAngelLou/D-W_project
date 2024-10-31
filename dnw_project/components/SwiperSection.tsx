@@ -178,8 +178,6 @@ const SpotlightSection: FC = () => {
               <a href="https://www.youtube.com/watch?v=L6y8viGzWhI" target="_blank" rel="noopener noreferrer">
                 <div className="relative">
                   <img src={img4.src} className="w-full h-auto rounded-md" alt="MTV Interview" />
-                  <img src={rectangle.src} className="absolute top-0 right-0 h-full w-1/3 opacity-80" alt="Overlay" />
-                  <img src={arrow.src} className="absolute top-1/2 right-10 transform -translate-y-1/2" alt="Arrow" />
                 </div>
               </a>
               <h3 className="font-bebas text-2xl mt-2 text-[#d3d3d3] text-center">

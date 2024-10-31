@@ -1,0 +1,44 @@
+/* Hero.css */
+
+/* Mobile-specific styling */
+@media (max-width: 640px) {
+    .hero-section {
+      /* Mobile specific styles */
+      padding: 1rem;
+    }
+    .left-content .text-content {
+      font-size: 0.875rem; /* text-sm */
+    }
+    .hero-image {
+      width: 80%;
+    }
+  }
+  
+  /* Tablet-specific styling */
+  @media (min-width: 641px) and (max-width: 1024px) {
+    .hero-section {
+      /* Tablet specific styles */
+      padding: 2rem;
+    }
+    .left-content .text-content {
+      font-size: 1rem; /* text-base */
+    }
+    .hero-image {
+      width: 60%;
+    }
+  }
+  
+  /* Desktop-specific styling */
+  @media (min-width: 1025px) {
+    .hero-section {
+      /* Desktop specific styles */
+      padding: 3rem;
+    }
+    .left-content .text-content {
+      font-size: 1.5rem; /* lg:text-2xl */
+    }
+    .hero-image {
+      width: 100%;
+    }
+  }
+  

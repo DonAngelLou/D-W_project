@@ -71,7 +71,7 @@ const SpotlightSection: FC = () => {
               />
             </a>
             <h3 className="font-bebas text-2xl mt-2 text-[#d3d3d3] group-hover:underline group-hover:text-white transition-all text-center lg:text-left">
-              The stars of 'Deadpool & Wolverine' take Vanity Fair's infamous lie detector test.
+              The stars of &#39;Deadpool & Wolverine&#39; take Vanity Fair&#39;s infamous lie detector test.
             </h3>
           </motion.div>
 
@@ -85,7 +85,7 @@ const SpotlightSection: FC = () => {
               />
             </a>
             <h3 className="font-bebas text-2xl mt-2 text-[#d3d3d3] group-hover:underline group-hover:text-white transition-all text-center lg:text-left">
-              Interviewing Deadpool & Wolverine's main guys with Donny and Cong.
+              Interviewing Deadpool & Wolverine&#39;s main guys with Donny and Cong.
             </h3>
           </motion.div>
 
@@ -152,7 +152,7 @@ const SpotlightSection: FC = () => {
                 <img src={img1.src} className="w-full h-auto rounded-md" alt="Deadpool & Wolverine Stars" />
               </a>
               <h3 className="font-bebas text-2xl mt-2 text-[#d3d3d3] text-center">
-                The stars of 'Deadpool & Wolverine' take Vanity Fair's infamous lie detector test.
+                The stars of &#39;Deadpool & Wolverine&#39; take Vanity Fair&#39;s infamous lie detector test.
               </h3>
             </SwiperSlide>
 
@@ -161,7 +161,7 @@ const SpotlightSection: FC = () => {
                 <img src={img2.src} className="w-full h-auto rounded-md" alt="Interviewing Donny and Cong" />
               </a>
               <h3 className="font-bebas text-2xl mt-2 text-[#d3d3d3] text-center">
-                Interviewing Deadpool & Wolverine's main guys with Donny and Cong.
+                Interviewing Deadpool & Wolverine&#39;s main guys with Donny and Cong.
               </h3>
             </SwiperSlide>
 
@@ -181,7 +181,7 @@ const SpotlightSection: FC = () => {
                 </div>
               </a>
               <h3 className="font-bebas text-2xl mt-2 text-[#d3d3d3] text-center">
-                MTV’s Josh Horowitz chats with Ryan Reynolds and Hugh Jackman about finally teaming up for “Deadpool & Wolverine.”
+                MTV&#39;s Josh Horowitz chats with Ryan Reynolds and Hugh Jackman about finally teaming up for “Deadpool & Wolverine.”
               </h3>
             </SwiperSlide>
 

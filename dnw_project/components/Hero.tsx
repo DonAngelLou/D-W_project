@@ -1,64 +1,57 @@
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import Image from 'next/image';
 import { FaPlayCircle, FaChevronRight } from 'react-icons/fa';
 import { FaThreads, FaXTwitter, FaInstagram } from 'react-icons/fa6';
 import { IoLogoWhatsapp, IoLogoFacebook } from 'react-icons/io5';
 
-interface LinkButtonProps {
-  href: string;
-  text: string;
-}
-
-interface ShareButtonProps {
-  shareButton: boolean;
-  handleShareClick: () => void;
-}
-
 // Left content section with logo, text, and buttons
-const LeftContent = () => (
-  <div className="w-full lg:w-1/2 flex flex-col items-center lg:items-start justify-center p-6 md:p-8 lg:p-10 z-30 space-y-6 lg:space-y-8">
-    <img
-      src="/d&w-logo.png"
-      alt="Deadpool and Wolverine"
-      className="mt-10 lg:mt-0 md:pt-10"
-      style={{
-        width: '100%',
-        maxWidth: '280px', // Mobile
-        ...(window.innerWidth >= 768 && window.innerWidth < 1024 && { maxWidth: '360px' }), // Tablet
-        ...(window.innerWidth >= 1024 && { maxWidth: '480px' }), // Desktop
-      }}
-    />
-    <p
-      className="text-center lg:text-left max-w-xs md:max-w-lg lg:max-w-xl"
-      style={{
-        fontSize: '16px', // Mobile
-        ...(window.innerWidth >= 768 && window.innerWidth < 1024 && { fontSize: '18px' }), // Tablet
-        ...(window.innerWidth >= 1024 && { fontSize: '24px' }), // Desktop
-      }}
-    >
-      Marvel Studios’ “Deadpool & Wolverine” delivers the ultimate, iconic, cinematic team-up throwdown. Come together in cinemas on July 24.
-    </p>
-    <div className="flex gap-4 justify-center lg:justify-start items-center">
-      <LinkButton
-        href="https://www.disney.ph/movies/deadpool-and-wolverine"
-        text="Get Tickets Now"
-      />
-      <TrailerButton />
+const LeftContent = () => {
+  const [fontSize, setFontSize] = useState('16px');
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const handleResize = () => {
+        if (window.innerWidth >= 1024) setFontSize('24px'); // Desktop
+        else if (window.innerWidth >= 768) setFontSize('18px'); // Tablet
+        else setFontSize('16px'); // Mobile
+      };
+
+      handleResize(); // Initialize font size on load
+      window.addEventListener('resize', handleResize); // Listen for window resize
+
+      return () => window.removeEventListener('resize', handleResize);
+    }
+  }, []);
+
+  return (
+    <div className="w-full lg:w-1/2 flex flex-col items-center lg:items-start justify-center p-6 md:p-8 lg:p-10 z-30 space-y-6 lg:space-y-8">
+      <div className="relative w-full max-w-[280px] md:max-w-[360px] lg:max-w-[480px]">
+        <Image
+          src="/d&w-logo.png"
+          alt="Deadpool and Wolverine"
+          layout="responsive"
+          width={480}
+          height={480}
+          priority
+        />
+      </div>
+      <p className="text-center lg:text-left max-w-xs md:max-w-lg lg:max-w-xl" style={{ fontSize }}>
+        Marvel Studios’ “Deadpool & Wolverine” delivers the ultimate, iconic, cinematic team-up throwdown. Come together in cinemas on July 24.
+      </p>
+      <div className="flex gap-4 justify-center lg:justify-start items-center">
+        <LinkButton href="https://www.disney.ph/movies/deadpool-and-wolverine" text="Get Tickets Now" />
+        <TrailerButton />
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 // Button components for ticket link and trailer
-const LinkButton = ({ href, text }: LinkButtonProps) => (
+const LinkButton = ({ href, text }: { href: string; text: string }) => (
   <Link href={href} target="_blank">
-    <span className="text-[#E81127] bg-[#FBDC0D] hover:bg-gradient-to-r hover:from-white hover:to-[#FBDC0D] font-semibold"
-      style={{
-        padding: '8px 16px', // Mobile
-        ...(window.innerWidth >= 768 && window.innerWidth < 1024 && { padding: '10px 20px' }), // Tablet
-        ...(window.innerWidth >= 1024 && { padding: '12px 24px' }), // Desktop
-      }}
-    >
+    <span className="text-[#E81127] bg-[#FBDC0D] hover:bg-gradient-to-r hover:from-white hover:to-[#FBDC0D] font-semibold px-4 py-2">
       {text}
     </span>
   </Link>
@@ -66,20 +59,8 @@ const LinkButton = ({ href, text }: LinkButtonProps) => (
 
 const TrailerButton = () => (
   <Link href="https://www.youtube.com/watch?v=Idh8n5XuYIA" target="_blank">
-    <span className="flex items-center gap-2 hover:text-white/80"
-      style={{
-        fontSize: '14px', // Mobile
-        ...(window.innerWidth >= 768 && window.innerWidth < 1024 && { fontSize: '18px' }), // Tablet
-        ...(window.innerWidth >= 1024 && { fontSize: '20px' }), // Desktop
-      }}
-    >
-      <FaPlayCircle
-        style={{
-          fontSize: '24px', // Mobile
-          ...(window.innerWidth >= 768 && window.innerWidth < 1024 && { fontSize: '32px' }), // Tablet
-          ...(window.innerWidth >= 1024 && { fontSize: '40px' }), // Desktop
-        }}
-      />
+    <span className="flex items-center gap-2 hover:text-white/80 text-sm lg:text-lg">
+      <FaPlayCircle className="text-xl lg:text-2xl" />
       Watch Trailer
     </span>
   </Link>
@@ -88,23 +69,28 @@ const TrailerButton = () => (
 // Right content section for the hero image
 const RightContent = () => (
   <div className="relative w-full flex items-center lg:items-end justify-center h-auto lg:h-full lg:max-w-[47%] lg:mt-20">
-    <img
-      src="/hero.png"
-      alt="Deadpool and Wolverine"
-      className="lg:mt-6"
-      style={{
-        width: '100%',
-        maxWidth: '320px', // Mobile
-        ...(window.innerWidth >= 768 && window.innerWidth < 1024 && { maxWidth: '480px' }), // Tablet
-        ...(window.innerWidth >= 1024 && { maxWidth: '100%' }), // Desktop
-        objectFit: window.innerWidth >= 1024 ? 'cover' : 'contain',
-      }}
-    />
+    <div className="relative w-full max-w-[320px] md:max-w-[480px] lg:max-w-full">
+      <Image
+        src="/hero.png"
+        alt="Deadpool and Wolverine"
+        layout="responsive"
+        width={1000}
+        height={667}
+        objectFit="contain"
+        priority
+      />
+    </div>
   </div>
 );
 
 // Share button component with animation
-const ShareButton = ({ shareButton, handleShareClick }: ShareButtonProps) => (
+const ShareButton = ({
+  shareButton,
+  handleShareClick,
+}: {
+  shareButton: boolean;
+  handleShareClick: () => void;
+}) => (
   <div className="absolute bottom-5 left-0 flex items-center z-50">
     <motion.div
       onClick={handleShareClick}
@@ -130,7 +116,7 @@ const ShareButtonContent = ({ shareButton }: { shareButton: boolean }) => (
     <div className="flex items-center gap-3 px-4 py-2 whitespace-nowrap">
       <span className="font-semibold">SHARE ON</span>
       <FaChevronRight
-        className={`${shareButton ? 'rotate-90' : 'rotate-0'} transition-transform duration-500`}
+        className={`transition-transform duration-500 ${shareButton ? 'rotate-90' : 'rotate-0'}`}
       />
     </div>
     <div
